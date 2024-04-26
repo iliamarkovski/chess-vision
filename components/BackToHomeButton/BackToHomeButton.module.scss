@@ -1,0 +1,25 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-300);
+  font-size: var(--size-400);
+  color: var(--color-white);
+  margin-block-end: 1em;
+  transition: opacity var(--ease);
+
+  &:active {
+    opacity: 0.75;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
