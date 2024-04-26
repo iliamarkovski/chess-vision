@@ -1,0 +1,36 @@
+@import './reset.scss';
+
+:root {
+  --color-primary: #769656;
+  --color-secondary: #eeeed2;
+  --color-danger: #ae0000;
+  --color-black: #000;
+  --color-white: #fff;
+
+  --background-color-button: rgba(255, 255, 255, 0.1);
+  --background-color-button-hover: rgba(255, 255, 255, 0.2);
+
+  --weight-regular: 400;
+  --weight-bold: 600;
+
+  --size-900: 6rem; // 96px
+  --size-850: 4.5rem; // 72px
+  --size-800: 3rem; // 48px
+  --size-700: 2.5rem; // 40px
+  --size-600: 2rem; // 32px
+  --size-500: 1.5rem; // 24px
+  --size-400: 1rem; // 16px
+  --size-300: 0.5rem; // 8px
+  --size-200: 0.25rem; // 4px
+  --size-100: 0.125rem; // 2px
+  --size-1: 1px;
+
+  --padding-layout: 1.5rem;
+
+  --ease: 0.25s ease;
+}
+
+html {
+  height: -webkit-fill-available;
+  overscroll-behavior: none;
+}
