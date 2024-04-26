@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  font-size: var(--size-500);
+
+  background-color: var(--background-color-button);
+  border-radius: var(--size-400);
+  backdrop-filter: blur(var(--size-200));
+  padding: var(--size-500);
+  transition: background-color var(--ease);
+
+  &:active {
+    background-color: var(--background-color-button-hover);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--background-color-button-hover);
+    }
+  }
+}
+
+.icon {
+  width: var(--size-900);
+  height: var(--size-900);
+  border-radius: var(--size-400);
+  position: relative;
+  margin-bottom: var(--size-400);
+}
+
+.guessTheColor {
+  background-color: var(--color-primary);
+  color: var(--color-danger);
+  display: grid;
+  place-content: center;
+  font-size: var(--size-850);
+  font-weight: var(--weight-bold);
+  isolation: isolate;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: var(--color-secondary);
+    z-index: -1;
+  }
+}
