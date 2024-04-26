@@ -1,0 +1,29 @@
+@use '@/styles/breakpoints' as *;
+
+.button {
+  color: var(--color-white);
+  border: var(--size-100) solid currentColor;
+  background-color: transparent;
+
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: 0;
+  transition: var(--ease);
+  font-size: min(7vmin, var(--size-600));
+  user-select: none;
+  text-transform: capitalize;
+  border-radius: 100vmax;
+  border-width: var(--size-100);
+  padding-inline: 1em;
+
+  &:active {
+    background-color: var(--background-color-button-hover);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--background-color-button-hover);
+    }
+  }
+}
