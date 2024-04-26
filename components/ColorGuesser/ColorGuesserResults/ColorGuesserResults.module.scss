@@ -1,0 +1,60 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--size-600);
+}
+
+.board {
+  border-radius: var(--size-400);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  container-type: inline-size;
+  overflow: hidden;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5cqi;
+  aspect-ratio: 1/1;
+}
+
+.dark {
+  background-color: var(--color-primary);
+}
+
+.light {
+  background-color: var(--color-secondary);
+}
+
+.incorrect {
+  color: var(--color-danger);
+  font-weight: var(--weight-bold);
+}
+
+.score {
+  color: var(--color-white);
+  font-size: min(7vmin, var(--size-600));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  flex-shrink: 0;
+  gap: 0.25em;
+
+  small {
+    font-size: 0.8em;
+  }
+}
+
+.button {
+  margin-block-start: var(--size-400);
+}

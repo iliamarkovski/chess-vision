@@ -1,0 +1,42 @@
+@use '@/styles/breakpoints' as *;
+
+.card {
+  width: 100%;
+  padding: min(7vmin, var(--size-800));
+  background-color: var(--background-color-button);
+  border-radius: var(--size-400);
+  backdrop-filter: blur(var(--size-200));
+  color: var(--color-white);
+}
+
+.progress {
+  font-size: min(5vmin, var(--size-500));
+  margin-block-end: 1em;
+  display: block;
+  line-height: 1;
+}
+
+.title {
+  margin: 0;
+  font-size: min(10vmin, var(--size-800));
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+  margin-block-end: 1em;
+  user-select: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  button {
+    &:first-child {
+      border-radius: 100vmax 0 0 100vmax;
+      border-right-width: var(--size-1);
+    }
+    &:last-child {
+      border-radius: 0 100vmax 100vmax 0;
+      border-left-width: var(--size-1);
+    }
+  }
+}
