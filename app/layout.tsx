@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { Layout } from '@/components/Layout/Layout';
 import '@/styles/globals.scss';
@@ -9,14 +9,6 @@ const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 });
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-  viewportFit: 'cover',
-};
 
 export const metadata: Metadata = {
   title: {
