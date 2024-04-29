@@ -1,0 +1,14 @@
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+}
+
+:where(.dark) {
+  background-color: var(--color-primary);
+}
+
+:where(.light) {
+  background-color: var(--color-secondary);
+}

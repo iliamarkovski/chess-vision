@@ -1,0 +1,40 @@
+.grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  container-type: inline-size;
+  width: 100%;
+}
+
+.rank {
+  display: grid;
+  place-items: center;
+  padding-inline-end: 2.5cqi;
+}
+
+.file {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  place-items: center;
+  grid-column: 2 / -1;
+  padding-block-start: 2cqi;
+}
+
+.file {
+  text-transform: uppercase;
+}
+
+.file span,
+.rank span {
+  font-size: 4cqi;
+  line-height: 1;
+}
+
+.board {
+  border-radius: var(--size-400);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  container-type: inline-size;
+  overflow: hidden;
+}
