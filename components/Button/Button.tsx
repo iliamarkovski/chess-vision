@@ -1,10 +1,18 @@
 import { ButtonHTMLAttributes } from 'react';
+import cn from 'classnames';
 import styles from './Button.module.scss';
 
-const Button = ({
-  ...props
-}: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>) => {
-  return <button {...props} className={styles.button} />;
+type Props = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'> & {
+  variant?: 'primary' | 'secondary';
+};
+
+const Button = ({ variant = 'primary', ...props }: Props) => {
+  return (
+    <button
+      {...props}
+      className={cn({ [styles.button]: true, [styles[variant]]: true })}
+    />
+  );
 };
 
 export { Button };

@@ -1,29 +1,53 @@
-@use '@/styles/breakpoints' as *;
-
 .button {
-  color: var(--color-white);
-  border: var(--size-100) solid currentColor;
-  background-color: transparent;
-
   text-align: center;
   cursor: pointer;
-  padding: 0.5em;
   margin: 0;
-  transition: var(--ease);
-  font-size: min(7vmin, var(--size-600));
+  font-size: var(--size-600);
+  padding: 0.5em 1em;
   user-select: none;
   text-transform: capitalize;
   border-radius: 100vmax;
   border-width: var(--size-100);
-  padding-inline: 1em;
+  border: var(--size-100) solid;
+  transition: background-color var(--ease);
 
-  &:active {
+  @media (max-width: $phone) {
+    font-size: var(--size-500);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: transparent;
+  border-color: currentColor;
+
+  &:not(:disabled):active {
     background-color: var(--background-color-button-hover);
   }
 
   @media (hover: hover) {
-    &:hover {
+    &:not(:disabled):hover {
       background-color: var(--background-color-button-hover);
+    }
+  }
+}
+
+.secondary {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+
+  &:not(:disabled):active {
+    background-color: var(--color-accent);
+  }
+
+  @media (hover: hover) {
+    &:not(:disabled):hover {
+      background-color: var(--color-accent);
     }
   }
 }
