@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
-import SquareColors from '@/pages/SquareColors';
+import { ColorGuesser } from '@/components/ColorGuesser/ColorGuesser';
 
 export const metadata: Metadata = {
   title: 'Square Colors',
 };
 
 const SquareColorsPage = () => {
-  return <SquareColors />;
+  return <ColorGuesser />;
 };
 
 export default SquareColorsPage;

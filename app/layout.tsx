@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
-import '@/styles/globals.scss';
 import { Layout } from '@/components/Layout/Layout';
+import '@/styles/globals.scss';
 
 const roboto = Roboto({
   weight: ['400', '700'],
