@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     template: '%s | Chess Vision',
     default: 'Chess Vision',
   },
+  description:
+    'Master chess notation effortlessly with our interactive exercises',
 };
 
 export default function MainLayout({
