@@ -38,7 +38,7 @@ const ColorGuesserQuiz = () => {
     }
   };
 
-  const title = shuffledNotation[counter]?.name.toUpperCase();
+  const title = shuffledNotation[counter]?.name.toUpperCase() ?? 'XX';
 
   return (
     <>
