@@ -1,0 +1,13 @@
+.score {
+  color: var(--color-white);
+  font-size: var(--size-500);
+  text-align: center;
+
+  @media (max-width: $phone) {
+    font-size: var(--size-450);
+  }
+
+  small {
+    font-size: 0.8em;
+  }
+}
