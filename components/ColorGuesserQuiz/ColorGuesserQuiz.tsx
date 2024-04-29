@@ -4,45 +4,51 @@ import styles from './ColorGuesserQuiz.module.scss';
 import { ColorGuesserContext } from '@/components/ColorGuesser/ColorGuesser';
 import { colors } from '@/constants/colors';
 import { shuffle } from '@/utils/shuffle';
-import { CoordinatesType } from '@/constants/coordinates';
+import { NotationType } from '@/constants/notation';
 import { Button } from '@/components/Button/Button';
-import { coordinates } from '@/constants/coordinates';
+import { notation } from '@/constants/notation';
+import { Title } from '@/components/Title/Title';
 
 const ColorGuesserQuiz = () => {
   const [counter, setCounter] = useState<number>(0);
-  const [shuffledItems, setShuffledItems] = useState<CoordinatesType[]>([]);
+  const [shuffledNotation, setShuffledNotation] = useState<NotationType[]>([]);
   const [correctAnswers, setCorrectAnswers] = useState<string[]>([]);
   const { setAnswers, toggleComplete } = useContext(ColorGuesserContext);
 
   useEffect(() => {
-    setShuffledItems(shuffle(coordinates));
+    setShuffledNotation(shuffle(notation));
   }, []);
 
   const clickHandler = (color: string) => {
-    const isCorrect = shuffledItems[counter].color === color;
+    const isCorrect = shuffledNotation[counter].color === color;
     setCounter((prevCounter) => (prevCounter += 1));
 
     if (counter + 1 < 64) {
       if (isCorrect) {
         setCorrectAnswers((prevCorrectAnswers) => [
           ...prevCorrectAnswers,
-          shuffledItems[counter].coordinate,
+          shuffledNotation[counter].name,
         ]);
       }
     } else {
-      const lastAnswer = isCorrect ? [shuffledItems[counter].coordinate] : [];
+      const lastAnswer = isCorrect ? [shuffledNotation[counter].name] : [];
 
       setAnswers([...correctAnswers, ...lastAnswer]);
       toggleComplete();
     }
   };
 
+  const title = shuffledNotation[counter]?.name.toUpperCase();
+
   return (
     <>
       <div className={styles.card}>
-        <span className={styles.progress}>{counter + 1} / 64</span>
-
-        <h1 className={styles.title}>{shuffledItems[counter]?.coordinate}</h1>
+        <header className={styles.header}>
+          <span className={styles.progress}>{counter + 1} / 64</span>
+          <Title>
+            What color is <span>{title}</span>?
+          </Title>
+        </header>
 
         <div className={styles.buttons}>
           <Button

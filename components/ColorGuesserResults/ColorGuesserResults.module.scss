@@ -1,0 +1,31 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--size-600);
+
+  @media (max-width: $phone) {
+    gap: var(--size-500);
+  }
+}
+
+.incorrect {
+  color: var(--color-danger);
+  font-weight: var(--weight-bold);
+}
+
+.button {
+  margin-block-start: var(--size-400);
+
+  @media (max-width: $phone) {
+    margin-block-start: var(--size-350);
+  }
+}
+
+.icon {
+  fill: var(--color-danger);
+  width: 50%;
+}

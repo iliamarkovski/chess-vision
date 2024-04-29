@@ -1,7 +1,7 @@
 'use client';
 import { useState, createContext } from 'react';
-import { ColorGuesserResults } from '@/components/ColorGuesser/ColorGuesserResults/ColorGuesserResults';
-import { ColorGuesserQuiz } from '@/components/ColorGuesser/ColorGuesserQuiz/ColorGuesserQuiz';
+import { ColorGuesserResults } from '@/components/ColorGuesserResults/ColorGuesserResults';
+import { ColorGuesserQuiz } from '@/components/ColorGuesserQuiz/ColorGuesserQuiz';
 
 type ContextProps = {
   complete: boolean;
@@ -12,8 +12,8 @@ type ContextProps = {
 
 const defaultValues: ContextProps = {
   complete: false,
-  correctAnswers: [],
   toggleComplete: () => {},
+  correctAnswers: [],
   setAnswers: () => {},
 };
 
