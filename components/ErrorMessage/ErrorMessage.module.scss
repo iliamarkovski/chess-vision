@@ -1,0 +1,9 @@
+.message {
+  font-size: var(--size-450);
+  color: var(--color-danger);
+  margin: 0;
+
+  @media (max-width: $phone) {
+    font-size: var(--size-400);
+  }
+}

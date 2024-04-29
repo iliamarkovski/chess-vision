@@ -1,0 +1,35 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--size-600);
+
+  @media (max-width: $phone) {
+    gap: var(--size-500);
+  }
+}
+
+.active {
+  background-color: var(--color-accent);
+}
+
+.icon {
+  width: 50%;
+}
+
+.correct {
+  fill: var(--color-success);
+}
+
+.incorrect {
+  fill: var(--color-danger);
+}
+
+.knightIcon {
+  width: 85%;
+  height: 85%;
+  fill: var(--color-white);
+}

@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-400);
+
+  @media (max-width: $phone) {
+    gap: var(--size-350);
+  }
+}
+
+.field {
+  display: flex;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  color: var(--color-white);
+  font-size: var(--size-600);
+  line-height: 1;
+  padding: 0.5em 2.5em;
+  text-align: center;
+  border: var(--size-100) solid var(--color-white);
+  border-radius: 100vmax;
+  transition: border-color var(--ease);
+
+  @media (max-width: $phone) {
+    font-size: var(--size-500);
+    text-align: left;
+    padding-inline-start: 1em;
+  }
+
+  &::placeholder {
+    color: var(--background-color-button-2);
+  }
+}
+
+.invalid {
+  border-color: var(--color-danger);
+}
+
+.button {
+  font-size: var(--size-600);
+  position: absolute;
+  inset: 0 0 0 auto;
+  padding: 0.25em 0.5em 0.25em 0;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: opacity var(--ease);
+  opacity: 0.75;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
