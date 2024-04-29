@@ -1,13 +1,16 @@
 @import './reset.scss';
 
 :root {
-  --color-primary: #769656;
-  --color-secondary: #eeeed2;
-  --color-danger: #ae0000;
+  --color-primary: #33694c;
+  --color-secondary: #e6e6e2;
+  --color-danger: crimson;
+  --color-success: #006400;
   --color-black: #000;
   --color-white: #fff;
+  --color-accent: #ffa500;
 
   --background-color-button: rgba(255, 255, 255, 0.1);
+  --background-color-button-2: rgba(255, 255, 255, 0.6);
   --background-color-button-hover: rgba(255, 255, 255, 0.2);
 
   --weight-regular: 400;
@@ -19,7 +22,9 @@
   --size-700: 2.5rem; // 40px
   --size-600: 2rem; // 32px
   --size-500: 1.5rem; // 24px
+  --size-450: 1.25rem; // 20px
   --size-400: 1rem; // 16px
+  --size-350: 0.75rem; // 12px
   --size-300: 0.5rem; // 8px
   --size-200: 0.25rem; // 4px
   --size-100: 0.125rem; // 2px
@@ -33,4 +38,9 @@
 html {
   height: -webkit-fill-available;
   overscroll-behavior: none;
+}
+
+body {
+  color: var(--color-white);
+  line-height: 1.25;
 }

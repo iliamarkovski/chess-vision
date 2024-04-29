@@ -1,0 +1,11 @@
+@mixin card {
+  background-color: var(--background-color-button);
+  backdrop-filter: blur(var(--size-200));
+  color: var(--color-white);
+}
+
+@mixin phone {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
