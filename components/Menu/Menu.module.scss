@@ -1,20 +1,21 @@
 .nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: var(--size-600);
+  align-items: center;
 }
 
 .link {
+  @include card;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: var(--color-white);
+  gap: var(--size-400);
   font-size: var(--size-500);
-
-  background-color: var(--background-color-button);
   border-radius: var(--size-400);
-  backdrop-filter: blur(var(--size-200));
   padding: var(--size-500);
   transition: background-color var(--ease);
 
@@ -30,14 +31,16 @@
 }
 
 .icon {
+  fill: var(--color-danger);
+  width: 95%;
+  height: 95%;
+}
+
+.card {
+  position: relative;
   width: var(--size-900);
   height: var(--size-900);
   border-radius: var(--size-400);
-  position: relative;
-  margin-bottom: var(--size-400);
-}
-
-.guessTheColor {
   background-color: var(--color-primary);
   color: var(--color-danger);
   display: grid;
