@@ -14,7 +14,7 @@ const BackToHomeButton = () => {
 
   return (
     <Link href='/' className={styles.button}>
-      <Icon name='back' className={styles.icon} />
+      <Icon name='home' className={styles.icon} />
       Back to home
     </Link>
   );
