@@ -3,6 +3,8 @@ import { Roboto } from 'next/font/google';
 import { Layout } from '@/components/Layout/Layout';
 import '@/styles/globals.scss';
 
+import { Analytics } from '@vercel/analytics/react';
+
 const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal'],
@@ -27,6 +29,7 @@ export default function MainLayout({
   return (
     <html lang='en'>
       <body className={roboto.className}>
+        <Analytics />
         <Layout>{children}</Layout>
       </body>
     </html>
