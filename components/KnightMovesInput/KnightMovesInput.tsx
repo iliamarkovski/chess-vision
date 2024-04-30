@@ -29,7 +29,7 @@ const KnightMovesInput = () => {
           onValidation={isNotationValid}
           onSuccess={addMove}
           placeholder='Enter move ...'
-          errorMessage='Please enter a valid board notation!'
+          errorMessage='Please enter a valid chess notation!'
         />
       </div>
 
