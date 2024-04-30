@@ -28,7 +28,7 @@ const KnightMovesInput = () => {
         <InputActions
           onValidation={isNotationValid}
           onSuccess={addMove}
-          placeholder='Enter move ...'
+          placeholder='Enter move...'
           errorMessage='Please enter a valid chess notation!'
         />
       </div>
